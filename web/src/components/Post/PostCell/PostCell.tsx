@@ -20,9 +20,9 @@ export const QUERY: TypedDocumentNode<FindPostById, FindPostByIdVariables> =
     }
   `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="p-4 text-center text-gray-500">Loading...</div>
 
-export const Empty = () => <div>Post not found</div>
+export const Empty = () => <div className="p-4 text-center text-gray-500">Post not found</div>
 
 export const Failure = ({ error }: CellFailureProps<FindPostByIdVariables>) => (
   <div className="rw-cell-error">{error?.message}</div>

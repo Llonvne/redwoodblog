@@ -20,7 +20,7 @@ export const QUERY: TypedDocumentNode<FindPosts, FindPostsVariables> = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="p-4 text-center text-gray-500">Loading...</div>
 
 export const Empty = () => {
   return (
