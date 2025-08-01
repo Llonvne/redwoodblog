@@ -1,8 +1,10 @@
+// @ts-expect-error redwoodjs did this
 import dns from 'dns'
 
 import type { UserConfig } from 'vite'
 import { defineConfig } from 'vite'
 
+// @ts-expect-error redwoodjs did this
 import redwood from '@redwoodjs/vite'
 
 // So that Vite will load on localhost instead of `127.0.0.1`.

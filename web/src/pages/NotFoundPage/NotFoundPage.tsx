@@ -1,3 +1,5 @@
+import { Link, routes } from '@redwoodjs/router'
+
 export default () => (
   <main>
     <style
@@ -39,6 +41,10 @@ export default () => (
       <h1>
         <span>404 Page Not Found</span>
       </h1>
+
+      <h2>
+        <Link to={routes.home()}>So back to home?</Link>
+      </h2>
     </section>
   </main>
 )
