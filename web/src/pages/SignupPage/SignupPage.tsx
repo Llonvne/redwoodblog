@@ -1,49 +1,49 @@
-import { useEffect, useRef } from 'react'
-
-import {
-  Form,
-  Label,
-  TextField,
-  PasswordField,
-  FieldError,
-  Submit,
-} from '@redwoodjs/forms'
-import { Link, navigate, routes } from '@redwoodjs/router'
+// import { useEffect, useRef } from 'react'
+//
+// import {
+//   Form,
+//   Label,
+//   TextField,
+//   PasswordField,
+//   FieldError,
+//   Submit,
+// } from '@redwoodjs/forms'
+// import { Link, navigate, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
-import { toast, Toaster } from '@redwoodjs/web/toast'
-
-import { useAuth } from 'src/auth'
+// import { toast, Toaster } from '@redwoodjs/web/toast'
+//
+// import { useAuth } from 'src/auth'
 
 const SignupPage = () => {
-  const { isAuthenticated, signUp } = useAuth()
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate(routes.home())
-    }
-  }, [isAuthenticated])
-
-  // focus on username box on page load
-  const usernameRef = useRef<HTMLInputElement>(null)
-  useEffect(() => {
-    usernameRef.current?.focus()
-  }, [])
-
-  const onSubmit = async (data: Record<string, string>) => {
-    const response = await signUp({
-      username: data.username,
-      password: data.password,
-    })
-
-    if (response.message) {
-      toast(response.message)
-    } else if (response.error) {
-      toast.error(response.error)
-    } else {
-      // user is signed in automatically
-      toast.success('Welcome!')
-    }
-  }
+  // const { isAuthenticated, signUp } = useAuth()
+  //
+  // useEffect(() => {
+  //   if (isAuthenticated) {
+  //     navigate(routes.home())
+  //   }
+  // }, [isAuthenticated])
+  //
+  // // focus on username box on page load
+  // const usernameRef = useRef<HTMLInputElement>(null)
+  // useEffect(() => {
+  //   usernameRef.current?.focus()
+  // }, [])
+  //
+  // const onSubmit = async (data: Record<string, string>) => {
+  //   const response = await signUp({
+  //     username: data.username,
+  //     password: data.password,
+  //   })
+  //
+  //   if (response.message) {
+  //     toast(response.message)
+  //   } else if (response.error) {
+  //     toast.error(response.error)
+  //   } else {
+  //     // user is signed in automatically
+  //     toast.success('Welcome!')
+  //   }
+  // }
 
   return (
     <>
