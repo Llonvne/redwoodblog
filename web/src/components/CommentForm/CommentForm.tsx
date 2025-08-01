@@ -21,7 +21,7 @@ const CREATE: TypedDocumentNode<CreateCommentMutation, CreateCommentMutationVari
 
 interface FormValues {
   name: string
-  comment: string
+  body: string
 }
 
 interface Props {

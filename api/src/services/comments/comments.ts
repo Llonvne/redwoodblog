@@ -1,4 +1,4 @@
-import type {QueryResolvers, CommentRelationResolvers} from 'types/graphql'
+import type {CommentRelationResolvers} from 'types/graphql'
 
 import {db} from 'src/lib/db'
 import {Prisma} from "@prisma/client";
@@ -11,11 +11,11 @@ export const comments = ({
   })
 }
 
-export const comment: QueryResolvers['comment'] = ({id}) => {
-  return db.comment.findUnique({
-    where: {id},
-  })
-}
+// export const comment: QueryResolvers['comment'] = ({id}) => {
+//   return db.comment.findUnique({
+//     where: {id},
+//   })
+// }
 
 export const Comment: CommentRelationResolvers = {
   post: (_obj, {root}) => {
